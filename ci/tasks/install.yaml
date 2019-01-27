@@ -9,7 +9,7 @@ inputs:
 - name: nodejsCode
 
 outputs:
-- name: node_modules
+- name: nodejsCode/node_modules
 
 run:
   path: nodejsCode/ci/scripts/install.sh
