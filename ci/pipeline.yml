@@ -7,10 +7,10 @@ resources:
     branch: master
 
 jobs:
-- name: execute tests
+- name: execute-tests
   plan:
   - get: nodejsCode
   - task: install dependencies
     file: nodejsCode/ci/tasks/install.yaml
   - task: run the test suite
-    file: nodejsCode/ci/tasks/test.yml
+    file: nodejsCode/ci/tasks/test.yaml

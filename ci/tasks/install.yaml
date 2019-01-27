@@ -12,5 +12,4 @@ outputs:
 - name: node_modules
 
 run:
-  path: npm
-  args: [ install ]
+  path: nodejsCode/ci/scripts/install.sh

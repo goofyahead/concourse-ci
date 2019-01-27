@@ -10,5 +10,4 @@ inputs:
   - name: node_modules
 
 run:
-  path: npm
-  args: [ test ]
+  path: nodejsCode/ci/scripts/test.sh
