@@ -10,7 +10,7 @@ jobs:
 - name: execute-tests
   plan:
   - get: nodejsCode
-  - task: install dependencies
+  - task: install-dependencies
     file: nodejsCode/ci/tasks/install.yaml
-  - task: run the test suite
+  - task: run-test
     file: nodejsCode/ci/tasks/test.yaml
