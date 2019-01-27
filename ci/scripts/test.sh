@@ -2,4 +2,4 @@
 
 set -e -u -x
 
-npm test
+cd nodejsCode && npm test
