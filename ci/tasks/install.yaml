@@ -6,9 +6,11 @@ image_resource:
   source: {repository: node, tag: '8-alpine'}
 
 inputs:
-  - name: nodejsCode
-  - name: node_modules
+- name: nodejsCode
+
+outputs:
+- name: node_modules
 
 run:
   path: npm
-  args: [ test ]
+  args: [ install ]
