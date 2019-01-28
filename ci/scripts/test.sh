@@ -2,5 +2,5 @@
 
 set -e -u -x
 
-mv output/node_modules nodejsCode/node_modules
+cp -r output/node_modules nodejsCode/node_modules
 cd nodejsCode && npm test
