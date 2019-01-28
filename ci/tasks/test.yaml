@@ -7,7 +7,7 @@ image_resource:
 
 inputs:
   - name: nodejsCode
-  - name: nodejsCode/node_modules
+  - name: output/node_modules
 
 run:
   path: nodejsCode/ci/scripts/test.sh
