@@ -1,7 +1,5 @@
 #!/bin/sh
 
-set -e -u -x
-
 cd nodejsCode && npm install
 mkdir output
 ls
