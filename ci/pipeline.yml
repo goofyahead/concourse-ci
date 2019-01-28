@@ -5,6 +5,9 @@ resources:
   source:
     uri: https://github.com/goofyahead/concourse-ci.git
     branch: master
+- name: postgres
+  type: docker-image
+  source: {repository: mdillon/postgis, tag: 'latest'}
 
 jobs:
 - name: execute-tests
@@ -15,4 +18,4 @@ jobs:
   - task: run-test
     file: nodejsCode/ci/tasks/test.yaml
   - task: run-integration-test
-    file: nodejsCode/ci/tasks/test.yaml
+    file: nodejsCode/ci/tasks/itegration-test.yaml
