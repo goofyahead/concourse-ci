@@ -7,12 +7,20 @@ resources:
     branch: master
 
 jobs:
-- name: execute-tests
+- name: unit-tests
   plan:
   - get: nodejsCode
   - task: install-dependencies
     file: nodejsCode/ci/tasks/install.yaml
   - task: run-test
     file: nodejsCode/ci/tasks/test.yaml
-  - task: run-integration-test
-    file: nodejsCode/ci/tasks/integration-test.yaml
+
+jobs:
+- name: integration
+  plan:
+  - get: nodejsCode
+  - task: install-dependencies
+    file: nodejsCode/ci/tasks/install.yaml
+  - task: integration-tests
+    privileged: true
+    file: nodejsCode/ci/tasks/integration-tests.yaml
