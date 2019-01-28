@@ -8,3 +8,15 @@ services:
       POSTGRES_PASSWORD: postgres
     volumes:
     - ./database:/docker-entrypoint-initdb.d
+    ports:
+    - "5432:5432"
+  # lambda:
+  #   build: .
+  #   depends_on:
+  #   - postgres
+  #   env_file:
+  #   - .env-test
+  #   volumes:
+  #   - ./src:/usr/app/src:consistent
+  #   - ./test:/usr/app/test:consistent
+  #   entrypoint: ./load-db-run-test.sh
