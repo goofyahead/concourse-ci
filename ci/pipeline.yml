@@ -15,4 +15,4 @@ jobs:
   - task: run-test
     file: nodejsCode/ci/tasks/test.yaml
   - task: run-integration-test
-    file: nodejsCode/ci/tasks/itegration-test.yaml
+    file: nodejsCode/ci/tasks/integration-test.yaml
