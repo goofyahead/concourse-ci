@@ -1,4 +1,7 @@
 #!/bin/sh
 
 cp -r output/node_modules nodejsCode
-docker-compose -f ../../docker-compose.test.yaml && cd nodejsCode && npm run integration-test
+source /docker-lib.sh
+start_docker
+docker-compose -f ../../docker-compose.test.yaml up && cd nodejsCode && npm run integration-test
+docker-compose -f code/example/integration.yml down

@@ -14,8 +14,6 @@ jobs:
     file: nodejsCode/ci/tasks/install.yaml
   - task: run-test
     file: nodejsCode/ci/tasks/test.yaml
-
-jobs:
 - name: integration
   plan:
   - get: nodejsCode
@@ -23,4 +21,4 @@ jobs:
     file: nodejsCode/ci/tasks/install.yaml
   - task: integration-tests
     privileged: true
-    file: nodejsCode/ci/tasks/integration-tests.yaml
+    file: nodejsCode/ci/tasks/integration-test.yaml
