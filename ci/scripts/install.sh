@@ -3,5 +3,6 @@
 set -e -u -x
 
 cd nodejsCode && npm install
+mkdir output
 ls
-mv node_modules output/node_modules
+cp node_modules output/node_modules
